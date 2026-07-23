@@ -2,8 +2,8 @@
 :root {
     --bg-color: #0f172a;
     --text-color: #f1f5f9;
-    --primary-color: #38bdf8; /* Bleu cyan moderne */
-    --secondary-color: #7e22ce; /* Violet moderne */
+    --primary-color: #38bdf8;
+    --secondary-color: #7e22ce;
     --card-bg: #1e293b;
     --card-hover: #334155;
     --font-main: 'Poppins', sans-serif;
@@ -23,15 +23,8 @@ html {
     overflow-x: hidden;
 }
 
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: 0.3s;
-}
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
 
 code {
     background: rgba(56, 189, 248, 0.15);
@@ -45,8 +38,7 @@ code {
 .area {
     position: fixed;
     top: 0; left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     z-index: -1;
 }
 
@@ -107,22 +99,40 @@ nav {
     font-size: 22px;
     font-weight: 700;
     color: var(--primary-color);
-    letter-spacing: 1px;
+}
+
+.author-tag {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 400;
+    margin-left: 5px;
 }
 
 nav ul {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
 }
 
 nav ul a {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
 }
 
 nav ul a:hover, nav ul a.active {
     color: var(--primary-color);
+}
+
+.btn-support {
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    font-size: 13px !important;
+}
+
+.btn-support:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .btn-invite {
@@ -138,14 +148,37 @@ nav ul a:hover, nav ul a.active {
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
 }
 
-/* --- Section Héro --- */
+/* --- Section Héro & Version Badge --- */
 .hero {
     min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 120px 20px 60px 20px;
+    padding: 130px 20px 60px 20px;
+}
+
+.version-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.v-tag {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.v-date {
+    color: #94a3b8;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 10px;
 }
 
 .hero-content h1 {
@@ -166,7 +199,7 @@ nav ul a:hover, nav ul a.active {
     font-weight: 300;
     max-width: 650px;
     margin: 0 auto 30px auto;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .hero-buttons {
@@ -205,7 +238,7 @@ nav ul a:hover, nav ul a.active {
     transform: translateY(-2px);
 }
 
-/* --- Section Guide & Démarrage --- */
+/* --- Section Guide --- */
 .guide-section {
     padding: 60px 20px;
     max-width: 1200px;
@@ -243,7 +276,6 @@ nav ul a:hover, nav ul a.active {
     padding: 25px;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
     transition: 0.3s;
 }
 
@@ -253,8 +285,7 @@ nav ul a:hover, nav ul a.active {
 }
 
 .step-number {
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     border-radius: 50%;
     display: flex;
@@ -264,17 +295,8 @@ nav ul a:hover, nav ul a.active {
     margin-bottom: 15px;
 }
 
-.step-card h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.step-card p {
-    font-size: 14px;
-    opacity: 0.8;
-    line-height: 1.5;
-    font-weight: 300;
-}
+.step-card h4 { font-size: 18px; margin-bottom: 10px; }
+.step-card p { font-size: 14px; opacity: 0.8; line-height: 1.5; font-weight: 300; }
 
 /* --- Section Commandes --- */
 .commands {
@@ -313,8 +335,6 @@ nav ul a:hover, nav ul a.active {
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: 0.3s;
-    position: relative;
-    overflow: hidden;
 }
 
 .command-card:hover {
@@ -336,16 +356,8 @@ nav ul a:hover, nav ul a.active {
     margin-right: 5px;
 }
 
-.command-header h3 {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.arg {
-    color: #94a3b8;
-    font-weight: 400;
-    font-size: 14px;
-}
+.command-header h3 { font-size: 20px; font-weight: 600; }
+.arg { color: #94a3b8; font-weight: 400; font-size: 14px; }
 
 .command-card p {
     font-weight: 300;
@@ -372,7 +384,7 @@ footer {
     text-align: center;
     padding: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    opacity: 0.7;
+    opacity: 0.8;
     font-weight: 300;
     font-size: 14px;
 }
@@ -402,41 +414,14 @@ footer {
     transform: translateY(0);
 }
 
-/* --- CORRECTION MOBILE (Barre du haut) --- */
+/* --- Responsive Mobile --- */
 @media (max-width: 768px) {
-    header {
-        padding: 12px 15px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    nav ul {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav ul a {
-        font-size: 13px;
-    }
-
-    .btn-invite {
-        padding: 6px 14px;
-        font-size: 12px;
-    }
-
-    .hero {
-        padding-top: 160px;
-    }
-
-    .hero-content h1 {
-        font-size: 28px;
-    }
-
-    .hero-content p {
-        font-size: 15px;
-    }
+    header { padding: 12px 15px; }
+    nav { flex-direction: column; gap: 12px; }
+    nav ul { gap: 10px; flex-wrap: wrap; justify-content: center; }
+    nav ul a { font-size: 12px; }
+    .hero { padding-top: 180px; }
+    .hero-content h1 { font-size: 28px; }
+    .hero-content p { font-size: 15px; }
+    .version-badge { font-size: 11px; padding: 4px 12px; }
 }
