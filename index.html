@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EH Service Bot | Commandes</title>
+    <title>EH Service Bot | Accueil & Commandes</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="area" >
-            <ul class="circles">
-                    <li></li><li></li><li></li><li></li><li></li>
-                    <li></li><li></li><li></li><li></li><li></li>
-            </ul>
-    </div >
+    <div class="area">
+        <ul class="circles">
+            <li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li>
+        </ul>
+    </div>
 
     <header>
         <nav>
             <div class="logo">EH Service</div>
             <ul>
                 <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#demarrer">Démarrage</a></li>
                 <li><a href="#commandes">Commandes</a></li>
                 <li><a href="#" class="btn-invite">Inviter le Bot</a></li>
             </ul>
@@ -30,8 +31,51 @@
     <section class="hero">
         <div class="hero-content">
             <h1 class="animate-pop-in">Simplifiez votre serveur avec<br><span class="highlight">EH Service Bot</span></h1>
-            <p class="animate-pop-in delay-1">Découvrez toutes les commandes disponibles pour la modération, la gestion et la sécurité de votre communauté.</p>
-            <a href="#commandes" class="btn-main animate-pop-in delay-2">Voir les commandes</a>
+            <p class="animate-pop-in delay-1">Un bot Discord complet conçu pour la modération, la gestion automatique du statut RP, la sécurité et le suivi de votre communauté.</p>
+            <div class="hero-buttons animate-pop-in delay-2">
+                <a href="#demarrer" class="btn-main">Comment démarrer</a>
+                <a href="#commandes" class="btn-secondary">Voir les commandes</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="demarrer" class="guide-section">
+        <h2 class="section-title">À propos & Prise en main</h2>
+
+        <div class="about-card scroll-animate">
+            <h3>🤖 Qu'est-ce que EH Service Bot ?</h3>
+            <p>
+                EH Service Bot est une solution clé en main pour gérer facilement votre serveur Discord. 
+                Grâce à son panneau de configuration interactif (Slašh Commands & Menus déroulants), 
+                il automatise l'affichage de vos salons (compteur de membres, statut RP ouvert/fermé), 
+                vous permet de déclencher des alertes rouges en un clic et sécurise vos canaux avec un système de logs complet.
+            </p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card scroll-animate">
+                <div class="step-number">1</div>
+                <h4>Inviter le Bot</h4>
+                <p>Ajoutez le bot à votre serveur Discord avec les permissions nécessaires (Gestion des salons, messages et rôles).</p>
+            </div>
+
+            <div class="step-card scroll-animate">
+                <div class="step-number">2</div>
+                <h4>Lancer /config</h4>
+                <p>Exécutez la commande <code>/config</code>. Un panneau interactif complet s'affichera pour paramétrer le bot en quelques clics.</p>
+            </div>
+
+            <div class="step-card scroll-animate">
+                <div class="step-number">3</div>
+                <h4>Configurer les Rôles</h4>
+                <p>Définissez quels rôles ont accès aux commandes de modération (<code>/lock</code>, <code>/statut</code>, <code>/clear</code>, etc.).</p>
+            </div>
+
+            <div class="step-card scroll-animate">
+                <div class="step-number">4</div>
+                <h4>Salons & Automatisations</h4>
+                <p>Associez les salons pour le compteur de membres, la mise à jour automatique du statut RP et le journal de logs.</p>
+            </div>
         </div>
     </section>
 
@@ -47,7 +91,7 @@
                 </div>
                 <p>Affiche la liste complète des commandes disponibles sur EH Service Bot.</p>
                 <div class="command-footer">
-                    <span class="perm perm-all">Tuto tout le monde</span>
+                    <span class="perm perm-all">Tout le monde</span>
                 </div>
             </div>
 
@@ -58,7 +102,7 @@
                 </div>
                 <p>Affiche les informations sur la version actuelle du bot (ex: BETA).</p>
                 <div class="command-footer">
-                    <span class="perm perm-all">Tuto tout le monde</span>
+                    <span class="perm perm-all">Tout le monde</span>
                 </div>
             </div>
 
@@ -143,7 +187,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 EH Service Bot. Hyper stylé par l'IA.</p>
+        <p>&copy; 2026 EH Service Bot. Tous droits réservés.</p>
     </footer>
 
     <script>
