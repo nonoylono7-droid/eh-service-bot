@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EH Service Bot | Accueil & Commandes</title>
+    <title>EH Service Bot | Officiel</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -18,11 +18,12 @@
 
     <header>
         <nav>
-            <div class="logo">EH Service</div>
+            <div class="logo">EH Service <span class="author-tag">by nonoylono7</span></div>
             <ul>
                 <li><a href="#" class="active">Accueil</a></li>
                 <li><a href="#demarrer">Démarrage</a></li>
                 <li><a href="#commandes">Commandes</a></li>
+                <li><a href="https://discord.gg/invite" target="_blank" class="btn-support">💬 Support</a></li>
                 <li><a href="#" class="btn-invite">Inviter le Bot</a></li>
             </ul>
         </nav>
@@ -30,11 +31,17 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1 class="animate-pop-in">Simplifiez votre serveur avec<br><span class="highlight">EH Service Bot</span></h1>
-            <p class="animate-pop-in delay-1">Un bot Discord complet conçu pour la modération, la gestion automatique du statut RP, la sécurité et le suivi de votre communauté.</p>
+            <div class="version-badge animate-pop-in">
+                <span class="v-tag">Version 1.0.0-BETA</span>
+                <span class="v-date">Mise à jour : Juillet 2026</span>
+            </div>
+
+            <h1 class="animate-pop-in delay-1">Simplifiez votre serveur avec<br><span class="highlight">EH Service Bot</span></h1>
+            <p class="animate-pop-in delay-2">Un bot Discord complet développé par <strong>nonoylono7</strong>, conçu pour la modération, la gestion automatique du statut RP, la sécurité et le suivi de votre communauté.</p>
+            
             <div class="hero-buttons animate-pop-in delay-2">
                 <a href="#demarrer" class="btn-main">Comment démarrer</a>
-                <a href="#commandes" class="btn-secondary">Voir les commandes</a>
+                <a href="https://discord.gg/invite" target="_blank" class="btn-secondary">💬 Contacter le Support</a>
             </div>
         </div>
     </section>
@@ -45,8 +52,8 @@
         <div class="about-card scroll-animate">
             <h3>🤖 Qu'est-ce que EH Service Bot ?</h3>
             <p>
-                EH Service Bot est une solution clé en main pour gérer facilement votre serveur Discord. 
-                Grâce à son panneau de configuration interactif (Slašh Commands & Menus déroulants), 
+                EH Service Bot est une solution clé en main développée par <strong>nonoylono7</strong> pour gérer facilement votre serveur Discord. 
+                Grâce à son panneau de configuration interactif (Slash Commands & Menus déroulants), 
                 il automatise l'affichage de vos salons (compteur de membres, statut RP ouvert/fermé), 
                 vous permet de déclencher des alertes rouges en un clic et sécurise vos canaux avec un système de logs complet.
             </p>
@@ -187,12 +194,11 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 EH Service Bot. Tous droits réservés.</p>
+        <p>&copy; 2026 EH Service Bot. Développé avec passion par <strong>nonoylono7</strong>.</p>
     </footer>
 
     <script>
         const cards = document.querySelectorAll('.scroll-animate');
-        
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -200,10 +206,7 @@
                 }
             });
         });
-
-        cards.forEach(card => {
-            observer.observe(card);
-        });
+        cards.forEach(card => observer.observe(card));
     </script>
 </body>
 </html>
