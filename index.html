@@ -1,1 +1,165 @@
-<h1>Mon site est en ligne !</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EH Service Bot | Commandes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="area" >
+            <ul class="circles">
+                    <li></li><li></li><li></li><li></li><li></li>
+                    <li></li><li></li><li></li><li></li><li></li>
+            </ul>
+    </div >
+
+    <header>
+        <nav>
+            <div class="logo">EH Service</div>
+            <ul>
+                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#commandes">Commandes</a></li>
+                <li><a href="#" class="btn-invite">Inviter le Bot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="animate-pop-in">Simplifiez votre serveur avec<br><span class="highlight">EH Service Bot</span></h1>
+            <p class="animate-pop-in delay-1">Découvrez toutes les commandes disponibles pour la modération, la gestion et la sécurité de votre communauté.</p>
+            <a href="#commandes" class="btn-main animate-pop-in delay-2">Voir les commandes</a>
+        </div>
+    </section>
+
+    <section id="commandes" class="commands">
+        <h2 class="section-title">Liste des Commandes (/ )</h2>
+        
+        <div class="commands-grid">
+            
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>help</h3>
+                </div>
+                <p>Affiche la liste complète des commandes disponibles sur EH Service Bot.</p>
+                <div class="command-footer">
+                    <span class="perm perm-all">Tuto tout le monde</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>version</h3>
+                </div>
+                <p>Affiche les informations sur la version actuelle du bot (ex: BETA).</p>
+                <div class="command-footer">
+                    <span class="perm perm-all">Tuto tout le monde</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>lock <span class="arg">[raison]</span></h3>
+                </div>
+                <p>Verrouille le salon textuel actuel (empêche @everyone de parler).</p>
+                <div class="command-footer">
+                    <span class="perm perm-mod">Modération</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>unlock</h3>
+                </div>
+                <p>Déverrouille le salon textuel actuel (autorise à nouveau @everyone à parler).</p>
+                <div class="command-footer">
+                    <span class="perm perm-mod">Modération</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>clear <span class="arg">[duree]</span> <span class="arg">[unite]</span></h3>
+                </div>
+                <p>Supprime en masse les messages d'un salon selon une période donnée.</p>
+                <div class="command-footer">
+                    <span class="perm perm-mod">Modération</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>clear-nom <span class="arg">[utilisateur]</span></h3>
+                </div>
+                <p>Supprime les messages récents d'un utilisateur spécifique dans tous les salons.</p>
+                <div class="command-footer">
+                    <span class="perm perm-mod">Modération</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>statut <span class="arg">[etat]</span> <span class="arg">[duree]</span> <span class="arg">[unite]</span></h3>
+                </div>
+                <p>Force manuellement le statut RP du serveur (Ouvert/Fermé).</p>
+                <div class="command-footer">
+                    <span class="perm perm-mod">Modération</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>alerte <span class="arg">[action]</span> <span class="arg">[bloquer_salons]</span> <span class="arg">[raison]</span></h3>
+                </div>
+                <p>Gère l'Alerte Rouge : envoie des annonces et verrouille les salons configurés.</p>
+                <div class="command-footer">
+                    <span class="perm perm-admin">Administration</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>config</h3>
+                </div>
+                <p>Ouvre le panneau de configuration complet du bot (BETA).</p>
+                <div class="command-footer">
+                    <span class="perm perm-admin">Administration</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EH Service Bot. Hyper stylé par l'IA.</p>
+    </footer>
+
+    <script>
+        const cards = document.querySelectorAll('.scroll-animate');
+        
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        });
+
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
