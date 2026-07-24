@@ -56,7 +56,7 @@
                 EH Service Bot est une solution clé en main développée par <strong>nonoylono7</strong> pour gérer facilement votre serveur Discord. 
                 Grâce à son panneau de configuration interactif (Slash Commands & Menus déroulants), 
                 il automatise l'affichage de vos salons (compteur de membres, statut RP ouvert/fermé), 
-                vous permet de déclencher des alertes rouges en un clic et sécurise vos canaux avec un système de logs complet.
+                vous permet de déclencher des alertes rouges en un clic, d'envoyer des annonces sous forme d'Embed et sécurise vos canaux avec un système de logs complet.
             </p>
         </div>
 
@@ -76,7 +76,7 @@
             <div class="step-card scroll-animate">
                 <div class="step-number">3</div>
                 <h4>Configurer les Rôles</h4>
-                <p>Définissez quels rôles ont accès aux commandes de modération (<code>/lock</code>, <code>/statut</code>, <code>/clear</code>, etc.).</p>
+                <p>Définissez quels rôles ont accès aux commandes de modération (<code>/lock</code>, <code>/statut</code>, <code>/clear</code>, <code>/clear-nom</code>, etc.).</p>
             </div>
 
             <div class="step-card scroll-animate">
@@ -95,7 +95,7 @@
             <div class="config-card scroll-animate">
                 <div class="config-icon">🛡️</div>
                 <h3>Permissions des Rôles</h3>
-                <p>Restreignez l'accès aux commandes spécifiques (<code>/lock</code>, <code>/unlock</code>, <code>/clear</code>, <code>/statut</code>, etc.) à des rôles de modération personnalisés sur votre serveur.</p>
+                <p>Restreignez l'accès aux commandes spécifiques (<code>/lock</code>, <code>/unlock</code>, <code>/clear</code>, <code>/clear-nom</code>, <code>/statut</code>, etc.) à des rôles de modération personnalisés sur votre serveur.</p>
             </div>
 
             <div class="config-card scroll-animate">
@@ -119,7 +119,7 @@
             <div class="config-card scroll-animate">
                 <div class="config-icon">📜</div>
                 <h3>Salon des Logs</h3>
-                <p>Définissez le salon textuel où le bot enregistrera toutes les actions de modération et les changements d'état du serveur.</p>
+                <p>Définissez le salon textuel où le bot enregistrera toutes les actions de modération, d'envoi de messages et les changements d'état du serveur.</p>
             </div>
         </div>
     </section>
@@ -145,7 +145,7 @@
                     <span class="command-slash">/</span>
                     <h3>version</h3>
                 </div>
-                <p>Affiche les informations sur la version actuelle du bot et de la base de données.</p>
+                <p>Affiche les informations sur la version actuelle du bot et le nom du développeur.</p>
                 <div class="command-footer">
                     <span class="perm perm-all">Tout le monde</span>
                 </div>
@@ -198,9 +198,9 @@
             <div class="command-card scroll-animate">
                 <div class="command-header">
                     <span class="command-slash">/</span>
-                    <h3>clear-nom <span class="arg">[utilisateur]</span></h3>
+                    <h3>clear-nom <span class="arg">[utilisateur]</span> <span class="arg">[portee]</span></h3>
                 </div>
-                <p>Supprime les messages récents d'un utilisateur spécifique dans tous les salons.</p>
+                <p>Supprime les messages d'un joueur dans <strong>le salon actuel</strong> ou sur <strong>l'ensemble du serveur</strong>.</p>
                 <div class="command-footer">
                     <span class="perm perm-mod">Modération</span>
                 </div>
@@ -211,9 +211,20 @@
                     <span class="command-slash">/</span>
                     <h3>statut <span class="arg">[etat]</span> <span class="arg">[duree]</span> <span class="arg">[unite]</span></h3>
                 </div>
-                <p>Force manuellement le statut RP du serveur (Ouvert/Fermé).</p>
+                <p>Force manuellement le statut RP du serveur (Ouvert/Fermé) pour une durée définie.</p>
                 <div class="command-footer">
                     <span class="perm perm-mod">Modération</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>message <span class="arg">[message]</span> <span class="arg">[salon]</span> <span class="arg">[titre]</span> <span class="arg">[couleur]</span></h3>
+                </div>
+                <p>Envoie un message officiel ou un Embed personnalisé au nom du bot dans le salon de votre choix.</p>
+                <div class="command-footer">
+                    <span class="perm perm-admin">Administration</span>
                 </div>
             </div>
 
