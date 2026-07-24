@@ -22,6 +22,7 @@
             <ul>
                 <li><a href="#" class="active">Accueil</a></li>
                 <li><a href="#demarrer">Démarrage</a></li>
+                <li><a href="#config-details">Panneau /config</a></li>
                 <li><a href="#commandes">Commandes</a></li>
                 <li><a href="https://discord.gg/invite" target="_blank" class="btn-support">💬 Support</a></li>
                 <li><a href="#" class="btn-invite">Inviter le Bot</a></li>
@@ -32,7 +33,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="version-badge animate-pop-in">
-                <span class="v-tag">Version 1.0.0-BETA</span>
+                <span class="v-tag">Version 1.0.0</span>
                 <span class="v-date">Mise à jour : Juillet 2026</span>
             </div>
 
@@ -86,6 +87,43 @@
         </div>
     </section>
 
+    <section id="config-details" class="guide-section">
+        <h2 class="section-title">Modules de la commande <code>/config</code></h2>
+        <p class="section-subtitle">Le panneau <code>/config</code> vous permet de tout gérer via des menus déroulants interactifs :</p>
+
+        <div class="config-grid">
+            <div class="config-card scroll-animate">
+                <div class="config-icon">🛡️</div>
+                <h3>Permissions des Rôles</h3>
+                <p>Restreignez l'accès aux commandes spécifiques (<code>/lock</code>, <code>/unlock</code>, <code>/clear</code>, <code>/statut</code>, etc.) à des rôles de modération personnalisés sur votre serveur.</p>
+            </div>
+
+            <div class="config-card scroll-animate">
+                <div class="config-icon">📊</div>
+                <h3>Compteur de Membres</h3>
+                <p>Affiche le nombre total de membres en temps réel dans un salon vocal dédié avec un nom personnalisable (ex: 👥┃Membres : 150).</p>
+            </div>
+
+            <div class="config-card scroll-animate">
+                <div class="config-icon">🟢</div>
+                <h3>Statut Automatique</h3>
+                <p>Met à jour automatiquement un salon vocal pour indiquer si le service/RP est 🟢 <strong>Ouvert</strong> ou 🔴 <strong>Fermé</strong>, basé sur les logs envoyés par votre jeu.</p>
+            </div>
+
+            <div class="config-card scroll-animate">
+                <div class="config-icon">🚨</div>
+                <h3>Alerte Rouge</h3>
+                <p>Configurez les salons d'annonces de crise ainsi que les salons à verrouiller automatiquement en cas de déclenchement d'une Alerte Rouge.</p>
+            </div>
+
+            <div class="config-card scroll-animate">
+                <div class="config-icon">📜</div>
+                <h3>Salon des Logs</h3>
+                <p>Définissez le salon textuel où le bot enregistrera toutes les actions de modération et les changements d'état du serveur.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="commandes" class="commands">
         <h2 class="section-title">Liste des Commandes (/ )</h2>
         
@@ -107,7 +145,18 @@
                     <span class="command-slash">/</span>
                     <h3>version</h3>
                 </div>
-                <p>Affiche les informations sur la version actuelle du bot (ex: BETA).</p>
+                <p>Affiche les informations sur la version actuelle du bot et de la base de données.</p>
+                <div class="command-footer">
+                    <span class="perm perm-all">Tout le monde</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>support</h3>
+                </div>
+                <p>Affiche le lien vers le site web officiel et le serveur Discord de support.</p>
                 <div class="command-footer">
                     <span class="perm perm-all">Tout le monde</span>
                 </div>
@@ -184,7 +233,7 @@
                     <span class="command-slash">/</span>
                     <h3>config</h3>
                 </div>
-                <p>Ouvre le panneau de configuration complet du bot (BETA).</p>
+                <p>Ouvre le panneau de configuration interactif complet du bot.</p>
                 <div class="command-footer">
                     <span class="perm perm-admin">Administration</span>
                 </div>
