@@ -76,7 +76,7 @@
             <div class="step-card scroll-animate">
                 <div class="step-number">3</div>
                 <h4>Configurer les Rôles</h4>
-                <p>Définissez quels rôles ont accès aux commandes de modération (<code>/lock</code>, <code>/statut</code>, <code>/clear</code>, <code>/clear-nom</code>, etc.).</p>
+                <p>Définissez quels rôles ont accès aux commandes de modération (<code>/lock</code>, <code>/statut</code>, <code>/clear</code>, <code>/clear-nom</code>, <code>/alerte</code>, etc.).</p>
             </div>
 
             <div class="step-card scroll-animate">
@@ -95,7 +95,7 @@
             <div class="config-card scroll-animate">
                 <div class="config-icon">🛡️</div>
                 <h3>Permissions des Rôles</h3>
-                <p>Restreignez l'accès aux commandes spécifiques (<code>/lock</code>, <code>/unlock</code>, <code>/clear</code>, <code>/clear-nom</code>, <code>/statut</code>, etc.) à des rôles de modération personnalisés sur votre serveur.</p>
+                <p>Restreignez l'accès aux commandes spécifiques (<code>/lock</code>, <code>/unlock</code>, <code>/clear</code>, <code>/clear-nom</code>, <code>/statut</code>, <code>/alerte</code>, etc.) à des rôles de modération personnalisés sur votre serveur.</p>
             </div>
 
             <div class="config-card scroll-animate">
@@ -200,7 +200,7 @@
                     <span class="command-slash">/</span>
                     <h3>clear-nom <span class="arg">[utilisateur]</span> <span class="arg">[portee]</span></h3>
                 </div>
-                <p>Supprime les messages d'un joueur dans <strong>le salon actuel</strong> ou sur <strong>l'ensemble du serveur</strong>.</p>
+                <p>Supprime les messages d'un membre dans <strong>le salon actuel</strong> ou sur <strong>l'ensemble du serveur</strong>.</p>
                 <div class="command-footer">
                     <span class="perm perm-mod">Modération</span>
                 </div>
@@ -220,20 +220,20 @@
             <div class="command-card scroll-animate">
                 <div class="command-header">
                     <span class="command-slash">/</span>
-                    <h3>message <span class="arg">[message]</span> <span class="arg">[salon]</span> <span class="arg">[titre]</span> <span class="arg">[couleur]</span></h3>
+                    <h3>alerte <span class="arg">[action]</span> <span class="arg">[bloquer_salons]</span> <span class="arg">[raison]</span></h3>
                 </div>
-                <p>Envoie un message officiel ou un Embed personnalisé au nom du bot dans le salon de votre choix.</p>
+                <p>Gère l'Alerte Rouge : envoie des annonces et verrouille les salons configurés.</p>
                 <div class="command-footer">
-                    <span class="perm perm-admin">Administration</span>
+                    <span class="perm perm-mod">Modération</span>
                 </div>
             </div>
 
             <div class="command-card scroll-animate">
                 <div class="command-header">
                     <span class="command-slash">/</span>
-                    <h3>alerte <span class="arg">[action]</span> <span class="arg">[bloquer_salons]</span> <span class="arg">[raison]</span></h3>
+                    <h3>message <span class="arg">[message]</span> <span class="arg">[salon]</span> <span class="arg">[titre]</span> <span class="arg">[couleur]</span></h3>
                 </div>
-                <p>Gère l'Alerte Rouge : envoie des annonces et verrouille les salons configurés.</p>
+                <p>Envoie un message officiel ou un Embed personnalisé au nom du bot dans le salon de votre choix.</p>
                 <div class="command-footer">
                     <span class="perm perm-admin">Administration</span>
                 </div>
