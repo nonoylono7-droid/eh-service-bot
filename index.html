@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EH Service Bot | Officiel</title>
+    <title>EH Service Bot | Non Officiel</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -39,7 +39,7 @@
             </div>
 
             <h1 class="animate-pop-in delay-1">Simplifiez votre serveur avec<br><span class="highlight">EH Service Bot</span></h1>
-            <p class="animate-pop-in delay-2">Un bot Discord complet développé par <strong>nonoylono7</strong>, conçu pour la modération, la gestion automatique du statut RP, la sécurité et le suivi de votre communauté.</p>
+            <p class="animate-pop-in delay-2">Un bot Discord complet développé par <strong>nonoylono7</strong> pour la modération, la gestion automatique du statut RP, la sécurité et le suivi de votre communauté.<br><small style="opacity: 0.7; font-size: 0.85em;">⚠️ EH Service Bot est un projet indépendant et non officiel. Il n'est pas affilié à Emergency Hamburg ni à ses développeurs.</small></p>
             
             <div class="hero-buttons animate-pop-in delay-2">
                 <a href="https://discord.com/oauth2/authorize?client_id=1525150043508707328&permissions=8&integration_type=0&scope=applications.commands+bot" target="_blank" class="btn-main">Inviter le Bot</a>
@@ -57,7 +57,8 @@
                 EH Service Bot est une solution clé en main développée par <strong>nonoylono7</strong> pour gérer facilement votre serveur Discord. 
                 Grâce à son panneau de configuration interactif (Slash Commands & Menus déroulants), 
                 il automatise l'affichage de vos salons (compteur de membres, statut RP ouvert/fermé), 
-                vous permet de déclencher des alertes rouges en un clic, d'envoyer des annonces sous forme d'Embed et sécurise vos canaux avec un système de logs complet.
+                vous permet de déclencher des alertes rouges en un clic, d'envoyer des annonces sous forme d'Embed, de gérer les avertissements (warns) et sécurise vos canaux avec un système de logs complet.<br><br>
+                <em>Note : EH Service Bot est un projet indépendant créé par un passionné et n'est en aucun cas un bot officiel du jeu Emergency Hamburg.</em>
             </p>
         </div>
 
@@ -76,8 +77,8 @@
 
             <div class="step-card scroll-animate">
                 <div class="step-number">3</div>
-                <h4>Configurer les Rôles</h4>
-                <p>Définissez quels rôles ont accès aux commandes de modération (<code>/lock</code>, <code>/statut</code>, <code>/clear</code>, <code>/clear-nom</code>, <code>/alerte</code>, etc.).</p>
+                <h4>Configurer les Rôles & Commandes</h4>
+                <p>Définissez quels rôles ont accès aux commandes de modération et activez/désactivez les commandes selon vos besoins.</p>
             </div>
 
             <div class="step-card scroll-animate">
@@ -96,7 +97,13 @@
             <div class="config-card scroll-animate">
                 <div class="config-icon">🛡️</div>
                 <h3>Permissions des Rôles</h3>
-                <p>Restreignez l'accès aux commandes spécifiques (<code>/lock</code>, <code>/unlock</code>, <code>/clear</code>, <code>/clear-nom</code>, <code>/statut</code>, <code>/alerte</code>, etc.) à des rôles de modération personnalisés sur votre serveur.</p>
+                <p>Restreignez l'accès aux commandes spécifiques (<code>/lock</code>, <code>/unlock</code>, <code>/clear</code>, <code>/clear-nom</code>, <code>/statut</code>, <code>/warn</code>, etc.) à des rôles de modération personnalisés sur votre serveur.</p>
+            </div>
+
+            <div class="config-card scroll-animate">
+                <div class="config-icon">⚙️</div>
+                <h3>Désactivation de Commandes</h3>
+                <p>Activez ou désactivez à tout moment certaines commandes du bot directement dans votre serveur pour adapter EH Service Bot à vos besoins stricts.</p>
             </div>
 
             <div class="config-card scroll-animate">
@@ -120,7 +127,7 @@
             <div class="config-card scroll-animate">
                 <div class="config-icon">📜</div>
                 <h3>Salon des Logs</h3>
-                <p>Définissez le salon textuel où le bot enregistrera toutes les actions de modération, d'envoi de messages et les changements d'état du serveur.</p>
+                <p>Définissez le salon textuel où le bot enregistrera toutes les actions de modération, d'avertissements, d'envoi de messages et les changements d'état du serveur.</p>
             </div>
         </div>
     </section>
@@ -136,6 +143,17 @@
                     <h3>help</h3>
                 </div>
                 <p>Affiche la liste complète des commandes disponibles sur EH Service Bot.</p>
+                <div class="command-footer">
+                    <span class="perm perm-all">Tout le monde</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>userinfo <span class="arg">[membre]</span></h3>
+                </div>
+                <p>Affiche les informations détaillées d'un membre du serveur (dates de création/rejoint, rôles, etc.).</p>
                 <div class="command-footer">
                     <span class="perm perm-all">Tout le monde</span>
                 </div>
@@ -160,6 +178,28 @@
                 <p>Affiche le lien vers le site web officiel et le serveur Discord de support.</p>
                 <div class="command-footer">
                     <span class="perm perm-all">Tout le monde</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>warn <span class="arg">[membre]</span> <span class="arg">[raison]</span></h3>
+                </div>
+                <p>Donne un avertissement officiel à un membre et enregistre la sanction dans la base de données.</p>
+                <div class="command-footer">
+                    <span class="perm perm-mod">Modération</span>
+                </div>
+            </div>
+
+            <div class="command-card scroll-animate">
+                <div class="command-header">
+                    <span class="command-slash">/</span>
+                    <h3>warns <span class="arg">[membre]</span></h3>
+                </div>
+                <p>Affiche l'historique complet et la liste des avertissements reçus par un membre.</p>
+                <div class="command-footer">
+                    <span class="perm perm-mod">Modération</span>
                 </div>
             </div>
 
@@ -245,7 +285,7 @@
                     <span class="command-slash">/</span>
                     <h3>config</h3>
                 </div>
-                <p>Ouvre le panneau de configuration interactif complet du bot.</p>
+                <p>Ouvre le panneau de configuration interactif complet du bot (rôles, salons, désactivation de commandes).</p>
                 <div class="command-footer">
                     <span class="perm perm-admin">Administration</span>
                 </div>
@@ -255,7 +295,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 EH Service Bot. Développé avec passion par <strong>nonoylono7</strong>. | <a href="tos.html" style="color: var(--primary-color);">Conditions d'Utilisation (ToS)</a></p>
+        <p>&copy; 2026 EH Service Bot. Développé avec passion par <strong>nonoylono7</strong>. | Projet non officiel | <a href="tos.html" style="color: var(--primary-color);">Conditions d'Utilisation (ToS)</a></p>
     </footer>
 
     <script>
