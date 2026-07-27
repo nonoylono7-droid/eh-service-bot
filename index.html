@@ -34,7 +34,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="version-badge animate-pop-in">
-                <span class="v-tag">Version 1.0.2</span>
+                <span class="v-tag">Version 1.0.3</span>
                 <span class="v-date">Mise à jour : Juillet 2026</span>
             </div>
 
@@ -57,7 +57,7 @@
                 EH Service Bot est une solution clé en main développée par <strong>nonoylono7</strong> pour gérer facilement votre serveur Discord. 
                 Grâce à son panneau de configuration interactif (Slash Commands & Menus déroulants), 
                 il automatise l'affichage de vos salons (compteur de membres, statut RP ouvert/fermé), 
-                vous permet de déclencher des alertes rouges en un clic, d'envoyer des annonces sous forme d'Embed, de gérer les avertissements (warns) et sécurise vos canaux avec un système de logs complet.<br><br>
+                vous permet de déclencher des alertes rouges en un clic, d'envoyer des annonces sous forme d'Embed, de gérer la sanction par rôles d'avertissements (warns) et sécurise vos canaux avec un système de logs complet.<br><br>
                 <em>Note : EH Service Bot est un projet indépendant créé par un passionné et n'est en aucun cas un bot officiel du jeu Emergency Hamburg.</em>
             </p>
         </div>
@@ -78,7 +78,7 @@
             <div class="step-card scroll-animate">
                 <div class="step-number">3</div>
                 <h4>Configurer les Rôles & Commandes</h4>
-                <p>Définissez quels rôles ont accès aux commandes de modération et activez/désactivez les commandes selon vos besoins.</p>
+                <p>Définissez quels rôles ont accès aux commandes de modération, configurez le rôle d'avertissement et activez/désactivez les commandes selon vos besoins.</p>
             </div>
 
             <div class="step-card scroll-animate">
@@ -104,6 +104,12 @@
                 <div class="config-icon">⚙️</div>
                 <h3>Désactivation de Commandes</h3>
                 <p>Activez ou désactivez à tout moment certaines commandes du bot directement dans votre serveur pour adapter EH Service Bot à vos besoins stricts.</p>
+            </div>
+
+            <div class="config-card scroll-animate">
+                <div class="config-icon">⚠️</div>
+                <h3>Rôle Warn (Avertis)</h3>
+                <p>Attribuez un rôle automatique aux membres ayant au moins un avertissement actif (avec option de création automatique du rôle par le bot). Le rôle est automatiquement retiré quand tous les avertissements sont effacés.</p>
             </div>
 
             <div class="config-card scroll-animate">
@@ -186,7 +192,7 @@
                     <span class="command-slash">/</span>
                     <h3>warn <span class="arg">[membre]</span> <span class="arg">[raison]</span></h3>
                 </div>
-                <p>Donne un avertissement officiel à un membre et enregistre la sanction dans la base de données.</p>
+                <p>Donne un avertissement officiel à un membre, lui attribue le rôle "Averti" si configuré et enregistre la sanction.</p>
                 <div class="command-footer">
                     <span class="perm perm-mod">Modération</span>
                 </div>
@@ -197,7 +203,7 @@
                     <span class="command-slash">/</span>
                     <h3>warns <span class="arg">[membre]</span></h3>
                 </div>
-                <p>Affiche l'historique complet et la liste des avertissements reçus par un membre.</p>
+                <p>Affiche l'historique complet des avertissements reçus par un membre avec des options pour les supprimer ou purger.</p>
                 <div class="command-footer">
                     <span class="perm perm-mod">Modération</span>
                 </div>
@@ -285,7 +291,7 @@
                     <span class="command-slash">/</span>
                     <h3>config</h3>
                 </div>
-                <p>Ouvre le panneau de configuration interactif complet du bot (rôles, salons, désactivation de commandes).</p>
+                <p>Ouvre le panneau de configuration interactif complet du bot (rôles, rôle warn, salons, désactivation de commandes).</p>
                 <div class="command-footer">
                     <span class="perm perm-admin">Administration</span>
                 </div>
